@@ -37,7 +37,7 @@ var Circle = /** @class */ (function (_super) {
     };
     return Circle;
 }(Shape));
-var cir = new Circle(0, 0, 0xffffff, 2);
+var cir = new Circle(0, 0, "000000", 2);
 console.log(cir.area());
 var Square = /** @class */ (function (_super) {
     __extends(Square, _super);
@@ -73,9 +73,9 @@ var Square = /** @class */ (function (_super) {
     };
     return Square;
 }(Shape));
-var square1 = new Square(3, 5, 0xff0000, 10);
+var square1 = new Square(3, 5, "ff0000", 10);
 square1.draw();
-var square2 = new Square(4, 5, 0x004400, 17);
+var square2 = new Square(4, 5, "00ff00", 17);
 square2.draw();
 var Rectangle = /** @class */ (function (_super) {
     __extends(Rectangle, _super);
@@ -112,7 +112,7 @@ var Rectangle = /** @class */ (function (_super) {
     };
     return Rectangle;
 }(Shape));
-var rectangle1 = new Rectangle(8, 4, 0xff0000, 40, 6);
+var rectangle1 = new Rectangle(8, 4, "ff0000", 40, 6);
 rectangle1.draw();
-var rectangle2 = new Rectangle(5, 5, 0x004400, 5, 15);
+var rectangle2 = new Rectangle(5, 5, "00ff00", 5, 15);
 rectangle2.draw();

@@ -5,9 +5,9 @@ interface IDrawable {
 abstract class Shape {
     x: number;
     y: number;
-    color: number;
+    color: string;
 
-    constructor(x: number, y: number, color: number) {
+    constructor(x: number, y: number, color: string) {
         this.x = x;
         this.y = y;
         this.color = color;
@@ -23,7 +23,7 @@ abstract class Shape {
 class Circle extends Shape {
     radius: number;
 
-    constructor(x: number, y: number, color: number, radius: number) {
+    constructor(x: number, y: number, color: string, radius: number) {
         super(x, y, color);
         this.radius = radius;
     }
@@ -41,14 +41,14 @@ class Circle extends Shape {
     }
 }
 
-var cir = new Circle (0,0,0xffffff,2);
+var cir = new Circle (0,0,"000000",2);
 console.log(cir.area());
 
 class Square extends Shape implements IDrawable {
     length: number;
     static draw: any;
 
-    constructor(x: number, y: number, color: number, length: number) {
+    constructor(x: number, y: number, color: string, length: number) {
         super(x, y, color);
         this.length = length;
     }
@@ -86,9 +86,9 @@ class Square extends Shape implements IDrawable {
 
 }
 
-var square1 = new Square(3,5,0xff0000,10);
+var square1 = new Square(3,5,"ff0000",10);
 square1.draw();
-var square2 = new Square(4, 5, 0x004400, 17);
+var square2 = new Square(4, 5, "00ff00", 17);
 square2.draw();
 
 
@@ -96,7 +96,7 @@ class Rectangle extends Shape implements IDrawable  {
     width: number;
     height: number;
 
-    constructor(x: number, y: number, color: number, width: number, height: number) {
+    constructor(x: number, y: number, color: string, width: number, height: number) {
         super(x, y, color);
         this.width = width;
         this.height = height;
@@ -134,7 +134,7 @@ class Rectangle extends Shape implements IDrawable  {
     }
 }
 
-var rectangle1 = new Rectangle(8, 4, 0xff0000, 40, 6);
+var rectangle1 = new Rectangle(8, 4, "ff0000", 40, 6);
 rectangle1.draw();
-var rectangle2 = new Rectangle(5, 5, 0x004400, 5, 15);
+var rectangle2 = new Rectangle(5, 5, "00ff00", 5, 15);
 rectangle2.draw();
